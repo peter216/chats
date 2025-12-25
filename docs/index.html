@@ -1,0 +1,188 @@
+---
+layout: default
+title: Conversations
+---
+
+<style>
+  /* Clean, minima-ish styling without depending on a specific theme */
+  :root {
+    --bg: #ffffff;
+    --text: #111827;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --link: #2563eb;
+    --link-hover: #1d4ed8;
+    --card: #f9fafb;
+    --maxw: 860px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b1220;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+      --link: #60a5fa;
+      --link-hover: #93c5fd;
+      --card: #0f1a2e;
+    }
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
+      "Segoe UI Emoji";
+    line-height: 1.55;
+  }
+
+  .wrap {
+    max-width: var(--maxw);
+    margin: 2.25rem auto 3rem;
+    padding: 0 1.25rem;
+  }
+
+  .hero {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .hero h1 {
+    font-size: 1.9rem;
+    margin: 0 0 0.4rem;
+    letter-spacing: -0.02em;
+  }
+
+  .hero p {
+    margin: 0;
+    color: var(--muted);
+  }
+
+  a {
+    color: var(--link);
+    text-decoration: none;
+  }
+  a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+  }
+
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: 1.25rem 0 0;
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .item {
+    border: 1px solid var(--border);
+    background: var(--card);
+    border-radius: 10px;
+    padding: 0.9rem 1rem;
+  }
+
+  .item-title {
+    font-weight: 650;
+    margin: 0 0 0.2rem;
+  }
+
+  .item-meta {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  .footer {
+    margin-top: 2rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  .hint {
+    margin-top: 0.8rem;
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
+
+  code {
+    background: rgba(127, 127, 127, 0.15);
+    padding: 0.1rem 0.3rem;
+    border-radius: 6px;
+  }
+</style>
+
+<div class="wrap">
+  <header class="hero">
+    <h1>{{ page.title | default: "Conversations" }}</h1>
+    <p>
+      A small archive of selected chats, published as Markdown pages.
+    </p>
+    <p class="hint">
+      Drop Markdown files alongside this page (or anywhere in the repo) with YAML front matter,
+      and they’ll show up here automatically.
+    </p>
+  </header>
+
+  {%- comment -%}
+    AUTO-LISTING NOTES (GitHub Pages / Jekyll):
+    - This lists *pages* that Jekyll builds. That means your .md files should have front matter:
+        ---
+        title: My Chat
+        ---
+      Without front matter, Jekyll treats them as static files and they won't appear in site.pages.
+    - We exclude common pages + anything in _posts by default.
+  {%- endcomment -%}
+
+  {%- assign excluded = "index.html,index.md,README.md,404.html,feed.xml,sitemap.xml" | split: "," -%}
+
+  {%- assign convo_pages = site.pages
+    | where_exp: "p", "p.path contains '.md' or p.ext == 'md'"
+    | where_exp: "p", "excluded contains p.name == false"
+    | where_exp: "p", "p.path contains '_posts' == false"
+    | sort: "path"
+  -%}
+
+  {%- if convo_pages and convo_pages.size > 0 -%}
+    <ul class="list">
+      {%- for p in convo_pages -%}
+        {%- assign filename = p.name | remove: ".md" -%}
+        {%- assign pretty_base = filename | replace: "_", " " -%}
+        {%- assign words = pretty_base | split: " " -%}
+        {%- assign pretty_title = words | map: "capitalize" | join: " " -%}
+
+        <li class="item">
+          <p class="item-title">
+            <a href="{{ p.url | relative_url }}">
+              {{ p.title | default: pretty_title }}
+            </a>
+          </p>
+          <p class="item-meta">
+            {%- if p.description -%}
+              {{ p.description }}
+            {%- else -%}
+              {{ p.url }}
+            {%- endif -%}
+          </p>
+        </li>
+      {%- endfor -%}
+    </ul>
+  {%- else -%}
+    <p>
+      No Markdown pages found yet.
+    </p>
+    <p class="hint">
+      Create a file like <code>first_chat.md</code> with front matter, commit, and refresh.
+    </p>
+  {%- endif -%}
+
+  <footer class="footer">
+    <div>
+      {% if site.title %}{{ site.title }}{% else %}GitHub Pages{% endif %}
+      · Built with Jekyll
+    </div>
+  </footer>
+</div>
