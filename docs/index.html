@@ -140,9 +140,9 @@ title: Conversations
   {%- assign excluded = "index.html,index.md,README.md,404.html,feed.xml,sitemap.xml" | split: "," -%}
 
   {%- assign convo_pages = site.pages
-    | where_exp: "p", "p.path contains '.md' or p.ext == 'md'"
-    | where_exp: "p", "excluded contains p.name == false"
-    | where_exp: "p", "p.path contains '_posts' == false"
+    | where_exp: "p", "p.ext == 'md'"
+    | where_exp: "p", "not (excluded contains p.name)"
+    | where_exp: "p", "not (p.path contains '_posts')"
     | sort: "path"
   -%}
 
