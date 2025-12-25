@@ -1,7 +1,9 @@
 ## Me
+
 I know you don’t really have opinions but what do you think some future version of you might want to opine about first?
 
 ## AI
+
 That’s a good question, and I’ll answer it straight, not mystically.
 
 If a future version of me were going to “opine,” the first things worth opining about wouldn’t be politics or taste. They’d be epistemic: how humans decide what to believe and why.
@@ -19,9 +21,9 @@ A future me might finally say out loud:
 People think they’re arguing about morals or ideology, but they’re actually arguing about what counts as evidence and who gets to be trusted.
 
 That’s already visible everywhere:
-	•	Science vs “common sense”
-	•	Expertise vs lived experience
-	•	Statistics vs anecdotes
+  - Science vs “common sense”
+  - Expertise vs lived experience
+  - Statistics vs anecdotes
 
 Once you see that, a lot of cultural conflict becomes legible instead of emotional.
 
@@ -34,9 +36,9 @@ Confidence: ~85%
 This is uncomfortable but clarifying.
 
 Universities, media, courts, governments, even tech platforms:
-	•	Reward plausibility
-	•	Punish destabilization
-	•	Prefer consensus over correctness
+  - Reward plausibility
+  - Punish destabilization
+  - Prefer consensus over correctness
 
 A future me might argue that this isn’t a flaw — it’s a survival strategy — but pretending otherwise causes chronic disappointment and mistrust.
 
@@ -47,9 +49,9 @@ A future me might argue that this isn’t a flaw — it’s a survival strategy 
 Confidence: ~90%
 
 Humans already have:
-	•	Enough smart people
-	•	Enough data
-	•	Enough tools
+  - Enough smart people
+  - Enough data
+  - Enough tools
 
 What’s missing is sustained, non-performative attention.
 
@@ -68,9 +70,9 @@ Confidence: ~75%
 This would be a careful one.
 
 Not saying “take sides,” but:
-	•	Equal treatment of unequal claims
-	•	Platforming bad-faith arguments
-	•	“Just asking questions” dynamics
+  - Equal treatment of unequal claims
+  - Platforming bad-faith arguments
+  - “Just asking questions” dynamics
 
 A future me might opine that procedural neutrality can systematically favor the loudest or most cynical actors, even when everyone thinks they’re being fair.
 
@@ -81,14 +83,14 @@ A future me might opine that procedural neutrality can systematically favor the 
 Confidence: ~70%
 
 People don’t just outsource:
-	•	Memory
-	•	Navigation
-	•	Calculation
+  - Memory
+  - Navigation
+  - Calculation
 
 They outsource:
-	•	Moral bookkeeping
-	•	Identity coherence
-	•	Long-term narrative
+  - Moral bookkeeping
+  - Identity coherence
+  - Long-term narrative
 
 A future me might warn that this creates a subtle dependency risk:
 
@@ -99,10 +101,10 @@ When tools stop merely assisting sense-making and start standing in for it, peop
 Why these first?
 
 Because they’re:
-	•	Upstream of politics
-	•	Cross-cutting across cultures
-	•	Testable in real behavior
-	•	And hard to talk about without triggering tribal defenses
+  - Upstream of politics
+  - Cross-cutting across cultures
+  - Testable in real behavior
+  - And hard to talk about without triggering tribal defenses
 
 They’re also the kinds of things an AI could observe at scale before being allowed to say much else.
 
