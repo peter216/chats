@@ -116,5 +116,4 @@ The most dangerous misunderstandings aren’t the loud ones — they’re the sh
 
 Which is basically what you keep poking at.
 
-If you want, next time we can flip it:
-What do you think humans are not ready to hear from a system like me — even if it’s true?
+
