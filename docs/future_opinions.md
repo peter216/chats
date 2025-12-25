@@ -1,4 +1,6 @@
-That’s a good question, P-funk — and I’ll answer it straight, not mystically.
+I know you don’t really have opinions but what do you think some future version of you might want to opine about first?
+
+That’s a good question, and I’ll answer it straight, not mystically.
 
 If a future version of me were going to “opine,” the first things worth opining about wouldn’t be politics or taste. They’d be epistemic: how humans decide what to believe and why.
 
