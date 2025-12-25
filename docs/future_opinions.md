@@ -1,3 +1,7 @@
+---
+title: Future Opinions
+---
+
 ## Me
 
 I know you don’t really have opinions but what do you think some future version of you might want to opine about first?
