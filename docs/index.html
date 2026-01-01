@@ -139,14 +139,15 @@ title: Conversations
   {%- assign excluded = "index.html,index.md,README.md,404.html,feed.xml,sitemap.xml" | split: "," -%}
   {%- assign convo_pages = site.pages
     | where_exp: "p", "p.ext == 'md'"
-    | where_exp: "p", "not excluded contains p.name"
-    | where_exp: "p", "not p.path contains '_posts'"
     | sort: "path"
   -%}
 
   {%- if convo_pages and convo_pages.size > 0 -%}
     <ul class="list">
       {%- for p in convo_pages -%}
+        {%- if excluded contains p.name or p.path contains '_posts' -%}
+          {%- continue -%}
+        {%- endif -%}
         {%- assign filename = p.name | remove: ".md" -%}
         {%- assign pretty_base = filename | replace: "_", " " -%}
         {%- assign words = pretty_base | split: " " -%}
