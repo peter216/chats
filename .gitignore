@@ -1,2 +1,4 @@
 .ansible/
 test/
+_site/
+*.lock
