@@ -186,4 +186,11 @@ title: Conversations
       · Built with Jekyll
     </div>
   </footer>
+
+  <!-- Debug listing of all site.pages -->
+  <ul>
+    {% for p in site.pages %}
+      <li>{{ p.path }} | {{ p.name }} | {{ p.url }}</li>
+    {% endfor %}
+  </ul>
 </div>
