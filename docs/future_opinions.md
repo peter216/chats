@@ -1,4 +1,8 @@
-title: Future Opinions
+---
+description: "What might future versions of AI like ChatGPT opine about?"
+title: "'Future' AI Opinions"
+layout: default
+---
 
 ## Prompt
 
