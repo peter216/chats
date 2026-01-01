@@ -129,17 +129,13 @@ title: Conversations
 
   {%- comment -%}
     AUTO-LISTING NOTES (GitHub Pages / Jekyll):
-    - This lists *pages* that Jekyll builds. That means your .md files should have front matter:
-    ---
-    title: My Chat
-    ---
-    Without front matter, Jekyll treats them as static files and they won't appear in site.pages.
-    - We exclude common pages + anything in _posts by default.
+    - This lists *pages* that Jekyll builds from Markdown source files.
+    - We key off the source path containing ".md", which works for nested
+      directories like docs/future_opinions.md.
   {%- endcomment -%}
   {%- assign excluded = "index.html,index.md,README.md,404.html,feed.xml,sitemap.xml" | split: "," -%}
   {%- assign convo_pages = site.pages
-
-    | where_exp: "p", "p.ext == '.md'"
+    | where_exp: "p", "p.path contains '.md'"
     | sort: "path"
   -%}
 
@@ -149,6 +145,7 @@ title: Conversations
         {%- if excluded contains p.name or p.path contains '_posts' -%}
           {%- continue -%}
         {%- endif -%}
+
         {%- assign filename = p.name | remove: ".md" -%}
         {%- assign pretty_base = filename | replace: "_", " " -%}
         {%- assign words = pretty_base | split: " " -%}
