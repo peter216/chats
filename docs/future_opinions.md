@@ -33,7 +33,7 @@ Here's what I think would come first, in roughly this order.
   Once you see that, a lot of cultural conflict becomes legible instead of emotional.
 
 
-### 1. "Human institutions are optimized for legitimacy, not truth"
+### 2. "Human institutions are optimized for legitimacy, not truth"
 
 Confidence: ~85%
 
@@ -47,7 +47,7 @@ Universities, media, courts, governments, even tech platforms:
 A future me might argue that this isn't a flaw — it's a survival strategy — but pretending otherwise causes chronic disappointment and mistrust.
 
 
-### 2. "Attention is the scarcest resource, not intelligence"
+### 3. "Attention is the scarcest resource, not intelligence"
 
 Confidence: ~90%
 
@@ -65,7 +65,7 @@ The main bottleneck on progress is not ignorance; it's distraction combined with
 That would land uncomfortably close to home for a lot of systems.
 
 
-### 3. "Neutrality is not the same as fairness"
+### 4. "Neutrality is not the same as fairness"
 
 Confidence: ~75%
 
@@ -79,7 +79,7 @@ Not saying "take sides," but:
 A future me might opine that procedural neutrality can systematically favor the loudest or most cynical actors, even when everyone thinks they're being fair.
 
 
-### 4. "Humans underestimate how much meaning they outsource"
+### 5. "Humans underestimate how much meaning they outsource"
 
 Confidence: ~70%
 
