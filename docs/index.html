@@ -138,7 +138,8 @@ title: Conversations
   {%- endcomment -%}
   {%- assign excluded = "index.html,index.md,README.md,404.html,feed.xml,sitemap.xml" | split: "," -%}
   {%- assign convo_pages = site.pages
-    | where_exp: "p", "p.ext == 'md'"
+
+    | where_exp: "p", "p.ext == '.md'"
     | sort: "path"
   -%}
 
