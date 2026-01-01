@@ -123,26 +123,24 @@ title: Conversations
     </p>
     <p class="hint">
       Drop Markdown files alongside this page (or anywhere in the repo) with YAML front matter,
-      and they’ll show up here automatically.
+      and they'll show up here automatically.
     </p>
   </header>
 
   {%- comment -%}
     AUTO-LISTING NOTES (GitHub Pages / Jekyll):
     - This lists *pages* that Jekyll builds. That means your .md files should have front matter:
-        ---
-        title: My Chat
-        ---
-      Without front matter, Jekyll treats them as static files and they won't appear in site.pages.
+    ---
+    title: My Chat
+    ---
+    Without front matter, Jekyll treats them as static files and they won't appear in site.pages.
     - We exclude common pages + anything in _posts by default.
   {%- endcomment -%}
-
   {%- assign excluded = "index.html,index.md,README.md,404.html,feed.xml,sitemap.xml" | split: "," -%}
-
   {%- assign convo_pages = site.pages
     | where_exp: "p", "p.ext == 'md'"
-    | where_exp: "p", "not (excluded contains p.name)"
-    | where_exp: "p", "not (p.path contains '_posts')"
+    | where_exp: "p", "excluded contains p.name == false"
+    | where_exp: "p", "p.path contains '_posts' == false"
     | sort: "path"
   -%}
 
